@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  /* Sharp Blink - High Visibility */
+  .animate-blink {
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  /* Status Pulse - Glowing Radar effect */
+  .animate-status-glow {
+    animation: status-glow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+@keyframes status-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.2); }
+}
